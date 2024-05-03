@@ -1,3 +1,4 @@
+use std::borrow::Cow;
 use std::error::Error;
 
 pub struct App {}
