@@ -18,6 +18,15 @@ impl AppList {
 }
 
 impl App {
+    pub fn name(&self) -> Cow<str> {
+        ""
+    }
+    pub fn publisher(&self) -> Cow<str> {
+        ""
+    }
+    pub fn version(&self) -> Cow<str> {
+        ""
+    }
     pub fn list() -> Result<impl Iterator<Item = Self>, Box<dyn std::error::Error>> {
         Ok(AppList::new().ok().into_iter().flatten())
     }
