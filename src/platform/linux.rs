@@ -1,3 +1,5 @@
+use std::error::Error;
+
 pub struct App {}
 
 struct AppList {}
