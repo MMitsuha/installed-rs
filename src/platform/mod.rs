@@ -6,4 +6,8 @@ mod platform_app;
 #[path = "windows.rs"]
 mod platform_app;
 
+#[cfg(target_os = "linux")]
+#[path = "linux.rs"]
+mod platform_app;
+
 pub use platform_app::App;
