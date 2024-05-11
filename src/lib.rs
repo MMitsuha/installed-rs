@@ -15,12 +15,13 @@ mod tests {
     fn test_get_apps() {
         match list() {
             Ok(l) => {
-                let _unused = l
+                let _ = l
                     .filter(|app| app.name().to_string().is_empty() == false)
                     .map(|app| {
-                        let _name = app.name().to_string();
-                        let _publisher = app.publisher().to_string();
-                        let _version = app.version().to_string();
+                        let name = app.name().to_string();
+                        let publisher = app.publisher().to_string();
+                        let version = app.version().to_string();
+                        println!("{} {} {}", name, publisher, version);
                     });
             }
             Err(_) => panic!(),
