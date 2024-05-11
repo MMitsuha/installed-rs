@@ -28,6 +28,11 @@ impl App {
     pub fn version(&self) -> Cow<str> {
         "".into()
     }
+
+    pub fn dump(&self) -> String {
+        "".into()
+    }
+
     pub fn list() -> Result<impl Iterator<Item = Self>, Box<dyn std::error::Error>> {
         Ok(AppList::new().ok().into_iter().flatten())
     }
